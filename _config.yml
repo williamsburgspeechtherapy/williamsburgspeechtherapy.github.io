@@ -1,8 +1,8 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: Williamsburg Speech Therapy
-description: 
-tagline: Change this tagline later
+description:
+tagline: Home-based • Personal • Local
 url: localhost:4000
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
@@ -15,7 +15,7 @@ author:
   name: Leila Geramian
   email: lgeramian@gmail.com
   bio: Nope
-  twitter: 
+  twitter:
 
 # general setting for Jekyll
 googleAnalytics: UA-XXXXX-X

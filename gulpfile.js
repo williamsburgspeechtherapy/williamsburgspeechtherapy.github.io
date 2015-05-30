@@ -13,8 +13,13 @@ var browserSync = require("browser-sync");
 var merge = require("merge-stream");
 // Need a command for reloading webpages using BrowserSync
 var reload = browserSync.reload;
-// And define a variable that BrowserSync uses in it"s function
+// And define a variable that BrowserSync uses in it's function
 var bs;
+
+var bourbon = require('node-bourbon').includePaths;
+var neat = require('node-neat').includePaths;
+var refills = require('node-refills').includePaths;
+
 
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
@@ -37,8 +42,11 @@ gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
-  return gulp.src("src/assets/scss/style.scss")
-    .pipe($.sass())
+  return gulp.src(["src/assets/scss/style.scss", "src/assets/scss/page/*.scss"])
+    .pipe($.sass({
+      // process bourbon, neat & refills
+      includePaths: ['styles'].concat(bourbon).concat(neat).concat(refills)
+    }))
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", { cascade: true }))
     // Directory your CSS file goes to

@@ -1,8 +1,23 @@
 ---
-layout: default
+layout: page
 title: Home
+css: home
 ---
 
+<div class="hero image-gradient-dynamic">
+  <div class="copy">
+    <p>{{ site.title }}</p>
+    <small>{{ site.tagline }}</small>
+  </div>
+</div>
+
+<div class="content">
+  <div class="row">
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+
+<!--
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -37,3 +52,4 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+-->
