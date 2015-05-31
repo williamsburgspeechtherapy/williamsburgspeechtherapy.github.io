@@ -1,0 +1,6 @@
+body.home {
+  .hero {
+    @include image-gradient-dynamic;
+    height: 80%;
+  }
+}

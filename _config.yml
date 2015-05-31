@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: Williamsburg Speech Therapy
 description:
-tagline: Home-based • Personal • Local
+tagline: Insured • Certified • Local
 url: localhost:4000
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants

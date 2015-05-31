@@ -7,7 +7,7 @@ var gulp = require("gulp");
 var $ = require("gulp-load-plugins")();
 // "del" is used to clean out directories and such
 var del = require("del");
-// BrowserSync isn"t a gulp package, and needs to be loaded manually
+// BrowserSync isn't a gulp package, and needs to be loaded manually
 var browserSync = require("browser-sync");
 // merge is used to merge the output from two different streams into the same stream
 var merge = require("merge-stream");
@@ -15,11 +15,11 @@ var merge = require("merge-stream");
 var reload = browserSync.reload;
 // And define a variable that BrowserSync uses in it's function
 var bs;
+// http://bourbon.io/
+var bourbon = require("node-bourbon").includePaths;
 
-var bourbon = require('node-bourbon').includePaths;
-var neat = require('node-neat').includePaths;
-var refills = require('node-refills').includePaths;
-
+// Clean all
+gulp.task("clean", ["clean:dev", "clean:prod"]);
 
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
@@ -39,18 +39,28 @@ gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
 // don"t end up publishing your drafts or future posts
 gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
 
+gulp.task("bower", function() { 
+  return $.bower()
+});
+
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
-gulp.task("styles", function () {
+gulp.task("styles", ["bower"], function () {
   // Looks at the style.scss file for what to include and creates a style.css file
-  return gulp.src(["src/assets/scss/style.scss", "src/assets/scss/page/*.scss"])
+  return gulp.src(["src/_scss/style.scss"])
+    .pipe($.debug({title: "STYLES:"}))
+    // Init sourcemaps
+    .pipe($.sourcemaps.init())
     .pipe($.sass({
-      // process bourbon, neat & refills
-      includePaths: ['styles'].concat(bourbon).concat(neat).concat(refills)
+      includePaths: [
+        "bower_components/"
+      ].concat(bourbon)
     }))
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", { cascade: true }))
+    // Write out the sourcemaps
+    .pipe($.sourcemaps.write())
     // Directory your CSS file goes to
-    .pipe(gulp.dest("src/assets/stylesheets/"))
+    // .pipe(gulp.dest("src/assets/stylesheets/"))
     .pipe(gulp.dest("serve/assets/stylesheets/"))
     // Outputs the size of the CSS file
     .pipe($.size({title: "styles"}))
@@ -147,7 +157,8 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // between them.
 gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
   bs = browserSync({
-    notify: true,
+    open: false,
+    notify: false,
     // tunnel: "",
     server: {
       baseDir: "serve"
@@ -160,7 +171,7 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
 gulp.task("watch", function () {
   gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt", "src/**/*.js"], ["jekyll-rebuild"]);
   gulp.watch(["serve/assets/stylesheets/*.css"], reload);
-  gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
+  gulp.watch(["src/_scss/**/*.scss"], ["styles"]);
 });
 
 // Serve the site after optimizations to see that everything looks fine

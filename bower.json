@@ -1,5 +1,15 @@
 {
   "name": "williamsburgspeechtherapy-github-io",
   "version": "0.0.0",
-  "dependencies": {}
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexboxgrid-sass": "~6.2.2",
+    "normalize-scss": "~3.0.3"
+  }
 }

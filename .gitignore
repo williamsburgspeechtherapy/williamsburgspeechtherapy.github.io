@@ -50,6 +50,7 @@ tags
 *.zip
 
 # Packages
+bower_components/*
 node_modules/*
 .tmp
 test/
@@ -58,8 +59,6 @@ test/
 *.sublime-project
 *.sublime-workspace
 *.sublime-projectcompletions
-
-app/_bower_components
 
 # Output folders
 serve
