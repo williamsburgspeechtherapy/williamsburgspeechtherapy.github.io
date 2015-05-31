@@ -136,8 +136,9 @@ gulp.task("deploy", function () {
     .pipe($.ghPages({
       // Currently only personal GitHub Pages are supported so it will upload to the master
       // branch and automatically overwrite anything that is in the directory
-      branch: "master"
-      }));
+      branch: "master",
+      force: true
+    }));
 });
 
 // Run JS Lint against your JS
