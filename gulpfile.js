@@ -57,14 +57,14 @@ gulp.task("styles", ["bower"], function () {
     }))
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", { cascade: true }))
+    // Directory your CSS file goes to
+    .pipe(gulp.dest("src/assets/stylesheets/"))
+    .pipe(gulp.dest("serve/assets/stylesheets/"))
     // Write out the sourcemaps
     .pipe($.sourcemaps.write())
-    // Directory your CSS file goes to
-    // .pipe(gulp.dest("src/assets/stylesheets/"))
-    .pipe(gulp.dest("serve/assets/stylesheets/"))
     // Outputs the size of the CSS file
     .pipe($.size({title: "styles"}))
-    // Injects the CSS changes to your browser since Jekyll doesn"t rebuild the CSS
+    // Injects the CSS changes to your browser since Jekyll doesn't rebuild the CSS
     .pipe(reload({stream: true}));
 });
 

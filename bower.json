@@ -9,7 +9,6 @@
     "tests"
   ],
   "dependencies": {
-    "flexboxgrid-sass": "~6.2.2",
     "normalize-scss": "~3.0.3"
   }
 }

@@ -1,6 +1,18 @@
 body.home {
   .hero {
     @include image-gradient-dynamic;
-    height: 80%;
   }
+}
+
+.box {
+  background-color: maroon;
+  height: 30px;
+  margin-bottom: .5rem;
+  color: white;
+
+  &.xs { width: $xs; }
+  &.sm { width: $sm; }
+  &.md { width: $md; }
+  &.lg { width: $lg; }
+  &.xl { width: $xl; }
 }
