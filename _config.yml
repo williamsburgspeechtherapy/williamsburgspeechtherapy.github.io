@@ -1,0 +1,23 @@
+name: "Leila Geramian, CCC SLP - Williamsburg Speech Therapist"
+brand: My Site
+description: This is the description of my site
+keyword:
+url: http://williamsburgspeechtherapy.com
+year: 2015
+email:
+author: Leila Geramian
+analytics:
+
+# Build settings
+markdown:     redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+sass:
+  compressed: true
+  load_paths:
+    - _sass
+    - bower_components/foundation/scss
+
+exclude:
+  - node_modules

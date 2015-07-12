@@ -1,0 +1,10 @@
+{
+  "name": "williamsburgspeechtherapy.github.io",
+  "version": "0.0.1",
+  "homepage": "http://williamsburgspeechtherapy.com",
+  "main": "index.html",
+  "private": true,
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}
