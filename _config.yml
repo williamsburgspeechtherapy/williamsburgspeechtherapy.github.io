@@ -9,15 +9,9 @@ email:
 analytics:
 
 # Build settings
-markdown:     redcarpet
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
+markdown: kramdown
 sass:
   compressed: true
   load_paths:
     - _sass
     - bower_components/foundation/scss
-
-exclude:
-  - node_modules
