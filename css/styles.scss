@@ -4,11 +4,11 @@
 
 @charset "utf-8";
 
-@import "normalize";
+@import "bower_components/foundation/scss/normalize";
 
 /* foundation */
 @import "settings";
-@import "foundation";
+@import "bower_components/foundation/scss/foundation";
 
 /* custom */
 @import "custom";

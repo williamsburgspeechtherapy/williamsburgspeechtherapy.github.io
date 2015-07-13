@@ -12,6 +12,6 @@ analytics:
 markdown: kramdown
 sass:
   compressed: true
-  load_paths:
-    - _sass
-    - bower_components/foundation/scss
+  # load_paths:
+  #   - _sass
+  #   - bower_components/foundation/scss
