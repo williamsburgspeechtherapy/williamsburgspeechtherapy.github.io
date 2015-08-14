@@ -1,15 +1,38 @@
-name: "Leila Geramian, CCC SLP - Home-based Speech & Language Therapy"
-brand: Williamsburg Speech Therapy
+# Site settings
+title: "Leila Geramian, CCC SLP - Home-based Speech & Language Therapy"
+email: lgeramian@gmail.com
 description: "Home-based Speech & Language Therapy"
 keyword: "speech therapy, speech language pathology, slp, brooklyn speech, williamsburg speech"
 url: http://williamsburgspeechtherapy.com
 year: "2015"
 author: Leila Geramian
-email:
 analytics:
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: '#d2386f'
+  links: '#d2386f'
+
+# Footer settings
+footer: Your Website
+
+# Social networks usernames (many more available: google-plus,
+# flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/wbspeech
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: https://github.com/IronSummitMedia/startbootstrap
 
 # Build settings
 markdown: kramdown
+permalink: pretty
 sass:
   compressed: true
   # load_paths:
