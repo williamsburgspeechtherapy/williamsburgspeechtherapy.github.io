@@ -1,6 +1,6 @@
 # Site settings
 title: "Leila Geramian, CCC SLP - Home-based Speech & Language Therapy"
-email: lgeramian@gmail.com
+email: leilag.SLP@gmail.com
 description: "Home-based Speech & Language Therapy"
 keyword: "speech therapy, speech language pathology, slp, brooklyn speech, williamsburg speech"
 url: http://williamsburgspeechtherapy.com
@@ -20,15 +20,9 @@ footer: Your Website
 # flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: https://twitter.com/wbspeech
+    url: https://twitter.com/williamsburgslp
   - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+    url: https://facebook.com/williamsburgspeechtherapy
 
 # Build settings
 markdown: kramdown
