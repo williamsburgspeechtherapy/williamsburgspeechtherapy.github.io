@@ -1,15 +1,132 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  {% include nav.html %}
-  {% include header.html %}
-  {% include about.html %}
-  {% include services.html %}
-  {% include pricing.html %}
-  {% include contact.html %}
-  {% include map.html %}
-  {% include footer.html %}
-  {% include js.html %}
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!-- Ah, the favicon.
+  ================================================== -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
+  Twitter: https://dev.twitter.com/docs/cards/types/summary-card
+  ============================== -->
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:site_name" content=" - {{ site.name }}">
+  <meta property="og:url" content=" - {{ site.url }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="{{ page.imageurl }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ page.imageurl }}">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+ <!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand page-scroll" href="#page-top">
+        <img class="logo" src="img/logo.svg" width="20" height="20">
+        Williamsburg <span class="light">Speech Therapy</span>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li><a class="page-scroll" href="#about">About</a></li>
+        <li><a class="page-scroll" href="#services">Services</a></li>
+        <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+        <li><a class="page-scroll" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- Intro Header -->
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+          <img class="brand-logo" src="img/logo.svg" width="125" height="125">
+          <h1 class="brand-heading">Leila Geramian, M.A., CCC-SLP</h1>
+          <p class="intro-text">
+            Certified Speech-Language Therapist
+          </p>
+          <div class="read-more">
+            <a href="#about" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article role="main" id="main">
+  {{ content }}
+</article>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <p>Copyright &copy; {{ site.footer }} 20{{ site.time | date: '%y' }}</p>
+  </div>
+</footer>
+
+
+<!-- jQuery Version 1.11.0 -->
+<script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- https://github.com/benhowdle89/svgeezy -->
+<script src="{{ "/js/svgeezy.min.js" | prepend: site.baseurl }}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
+
+<script>
+  svgeezy.init(false, 'png');
+</script>
+
+</body>
 </html>
