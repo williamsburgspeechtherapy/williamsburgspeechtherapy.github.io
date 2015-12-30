@@ -134,9 +134,13 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll
+  jekyll-paginate
   jekyll-sass-converter
+  jekyll-watch
   octopress-autoprefixer
+  redcarpet
   sass
 
 BUNDLED WITH
-   1.10.3
+   1.10.6

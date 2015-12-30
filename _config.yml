@@ -25,7 +25,9 @@ social:
     url: https://facebook.com/williamsburgspeechtherapy
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
 permalink: pretty
 sass:
   compressed: true

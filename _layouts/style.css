@@ -1,3 +1,52 @@
 {% include css/bootstrap.min.css %}
 {% include css/grayscale.css %}
-{% include css/custom.css %}
+
+body {
+  font-size: 16px;
+}
+
+#main {
+  padding-bottom: 100px;
+}
+
+@media(min-width:767px) {
+  .navbar.navbar-fixed-top .navbar-brand {
+    opacity: 0;
+  }
+
+  .navbar.navbar-fixed-top.top-nav-collapse .navbar-brand {
+    opacity: 1;
+  }
+}
+
+.intro {
+  text-align: left;
+}
+
+.intro .intro-body .brand-logo {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 25px auto;
+  border-radius: 100%;
+  background: #333 url(img/leila-geramian-SLP.jpeg) no-repeat;
+  background-size: cover;
+}
+
+.hilite {
+  /*background-color: #ffd;*/
+  font-weight: 700;
+  color: #444;
+}
+
+dl dt {
+  margin-top: 2rem;
+}
+
+.disclaimer {
+  margin: 40px 0;
+}
