@@ -31,6 +31,3 @@ redcarpet:
 permalink: pretty
 sass:
   compressed: true
-  # load_paths:
-  #   - _sass
-  #   - bower_components/foundation/scss
