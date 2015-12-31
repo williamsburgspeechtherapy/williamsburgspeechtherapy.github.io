@@ -7,7 +7,7 @@ layout: default
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h2>About Me</h2>
-      <div class="text-left">
+      <div class="text-left" itemprop="description">
         <p>
           Leila Geramian, Owner and Director, received her <span class="hilite">M.A in
           Speech­ Language Pathology</span> from CUNY Lehman College in September, 2012.
@@ -114,10 +114,14 @@ layout: default
       <br>
       <p>
         <strong>Williamsburg Speech Therapy</strong><br>
-        Leila Geramian, M.A., CCC-SLP<br>
-        240 Bedford Ave,<br>
-        Brooklyn, NY 11211<br>
-        <small><a href="mailto:info@williamsburgspeechtherapy.com">info@williamsburgspeechtherapy.com</a></small>
+        Leila Geramian, M.A., CCC-SLP
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <div itemprop="streetAddress">240 Bedford Ave</div>
+          <span itemprop="addressLocality">Brooklyn</span>,
+          <span itemprop="addressRegion">NY</span>
+          <span itemprop="postalCode">11211</span>
+        </div>
+        <small><a href="mailto:info@williamsburgspeechtherapy.com" itemprop="email">info@williamsburgspeechtherapy.com</a></small>
       </p>
     </div>
   </div>

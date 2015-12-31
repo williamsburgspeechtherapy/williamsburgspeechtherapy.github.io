@@ -51,9 +51,12 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
         <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand page-scroll" href="#page-top">
-        <img class="logo" src="img/logo.svg" width="20" height="20">
-        Williamsburg <span class="light">Speech Therapy</span>
+      <a class="navbar-brand page-scroll" href="#page-top" itemprop="url" href="http://williamsburgspeechtherapy.com/">
+
+        <div itemscope itemtype="http://schema.org/Organization">
+          <img class="logo" src="img/logo.svg" width="20" height="20">
+          <span itemprop="name">Williamsburg <span class="light">Speech Therapy</span></span>
+        </div>
       </a>
     </div>
 
@@ -73,6 +76,8 @@
   <!-- /.container -->
 </nav>
 
+<div itemscope itemtype="http://schema.org/Person">
+
 <!-- Intro Header -->
 <header class="intro">
   <div class="intro-body">
@@ -80,9 +85,9 @@
       <div class="row">
         <div class="col-md-7 col-md-offset-3">
           <img class="brand-logo" src="img/logo.svg" width="115" height="115">
-          <h1 class="brand-heading">Leila Geramian, M.A., CCC-SLP</h1>
+          <h1 class="brand-heading" itemprop="name">Leila Geramian, M.A., CCC-SLP</h1>
           <p class="intro-text">
-            Certified Speech-Language Therapist
+            <span itemprop="jobtitle">Certified Speech-Language Therapist</span>
             <br>
             Brooklyn, NY
           </p>
@@ -101,6 +106,7 @@
   {{ content }}
 </article>
 
+</div>
 
 <!-- jQuery Version 1.11.0 -->
 <script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
