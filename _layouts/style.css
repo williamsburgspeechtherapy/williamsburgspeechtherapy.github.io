@@ -32,8 +32,8 @@ body {
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 25px auto;
   border-radius: 100%;
   background: #333 url(img/leila-geramian-SLP.jpeg) no-repeat;
