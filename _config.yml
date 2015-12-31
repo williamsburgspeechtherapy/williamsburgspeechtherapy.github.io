@@ -7,14 +7,13 @@ url: http://williamsburgspeechtherapy.com
 year: "2015"
 author: Leila Geramian
 analytics:
+  ga: UA-71856391-1
+  intercom: x7tqao7j
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary: '#d2386f'
   links: '#d2386f'
-
-# Footer settings
-footer: Your Website
 
 # Social networks usernames (many more available: google-plus,
 # flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
