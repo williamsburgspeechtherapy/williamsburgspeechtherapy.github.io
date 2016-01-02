@@ -8,7 +8,7 @@ year: "2015"
 author: Leila Geramian
 analytics:
   gtm: GTM-5LM88L
-  ga: UA-71856391-1
+  # ga: UA-71856391-1
   intercom: x7tqao7j
   olark: 4658-436-10-7095
 
